@@ -3,7 +3,7 @@ import  express from 'express'
 import  morgan from 'morgan'
 import productoRuta from '../rutas/producto.js'
 import carritoRuta from '../rutas/carrito.js'
-import apiRuta from '../rutas/index.js'
+//import apiRuta from '../rutas/index.js'
 import {Server as ioServer} from 'socket.io'
 import http from 'http'
 
@@ -20,13 +20,13 @@ class Servidor {
     //Middlewares
     this.app.use(morgan("dev"));
     this.app.use(express.json());
-    this.app.use(express.static(process.cwd() + "\\public"));
+    //this.app.use(express.static(process.cwd() + "\\public"));
     this.app.use(express.urlencoded({ extended: true }));
 
     // Ruta de la Api en http://localhost:8080/api
     // prefijo, por el tema de versiones de la API
     this.apiCaminos = {
-      api: "/api",
+      //api: "/api",
       carritos:'/api/carritos',
       productos: "/api/productos",
     };
@@ -145,7 +145,7 @@ class Servidor {
 
 
   rutas() {
-    this.app.use(this.apiCaminos.api, apiRuta);
+    //this.app.use(this.apiCaminos.api, apiRuta);
     this.app.use(this.apiCaminos.productos, productoRuta);
     this.app.use(this.apiCaminos.carritos, carritoRuta);
   }
