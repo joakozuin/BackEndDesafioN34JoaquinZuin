@@ -6,7 +6,10 @@ import dotenv from 'dotenv';
 
  //console.log("Nombre Base Datos env: "+process.env.nombreBD)
 
-  switch (process.env.nombreBD) {
+  const nombreBD=MongoDB
+
+  //switch (process.env.nombreBD) {
+  switch (nombreBD) { 
     case 'MongoDB':
       console.log("Se está usando MongoDB como Base de datos")
       console.log("-----------------------------------------")
