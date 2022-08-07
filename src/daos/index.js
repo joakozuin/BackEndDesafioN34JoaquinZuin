@@ -6,7 +6,7 @@ import dotenv from 'dotenv';
 
  //console.log("Nombre Base Datos env: "+process.env.nombreBD)
 
-  const nombreBD=MongoDB
+  const nombreBD='MongoDB'
 
   //switch (process.env.nombreBD) {
   switch (nombreBD) { 
