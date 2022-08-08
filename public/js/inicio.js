@@ -12,7 +12,8 @@ recargarPag=()=>{
 
   // Petición HTTP Renderiza lado Servidor
 
-   fetch("http://localhost:8080/api/productos")
+   //fetch("http://localhost:8080/api/productos")
+   fetch("https://joakoweb.herokuapp.com/api/productos")
       .then((response) => response.text())
        .then(data=>{
               const productos=JSON.parse(data)

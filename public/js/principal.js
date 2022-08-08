@@ -77,7 +77,7 @@ botonEnvProd.addEventListener("click", (e) => {
 
   //Petición Post HTTP envia producto a la ruta
   //en formato JSON
-  fetch("http://localhost:8080/api/productos/", {
+  fetch("https://joakoweb.herokuapp.com/api/productos/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -160,7 +160,7 @@ recargarPag=()=>{
 
   // Petición HTTP Renderiza lado Servidor
 
-   fetch("http://localhost:8080/api/productos")
+   fetch("https://joakoweb.herokuapp.com/api/productos")
       .then((response) => response.text())
        .then(data=>{
               const productos=JSON.parse(data)
@@ -224,7 +224,7 @@ botonCargTabla.addEventListener("click", (e) => {
 
   // Petición HTTP Renderiza lado Servidor
 
-   fetch("http://localhost:8080/api/productos")
+   fetch("https://joakoweb.herokuapp.com/api/productos")
       .then((response) => response.text())
        .then(data=>{
               const productos=JSON.parse(data)
