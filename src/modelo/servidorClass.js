@@ -21,6 +21,10 @@ class Servidor {
     this.app.use(morgan("dev"));
     this.app.use(express.json());
     this.app.use(express.static(process.cwd() + "\\public"));
+
+    console.log('Ruta publica')
+    console.log(process.cwd() + "\\public")
+    
     this.app.use(express.urlencoded({ extended: true }));
 
     // Ruta de la Api en http://localhost:8080/api
