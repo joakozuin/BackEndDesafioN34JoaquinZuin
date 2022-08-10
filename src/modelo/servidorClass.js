@@ -20,7 +20,7 @@ class Servidor {
     //Middlewares
     this.app.use(morgan("dev"));
     this.app.use(express.json());
-    this.app.use(express.static(process.cwd() + "\\public"));
+    this.app.use(express.static(process.cwd() + "\/public"));
 
     this.app.use(express.urlencoded({ extended: true }));
 
@@ -129,8 +129,8 @@ class Servidor {
    usuario(login){
 
     console.log('Ruta publica')
-    console.log(process.cwd() + "\\public")
-    
+    console.log(process.cwd() + "\/public")
+
     if(login=='admin'){
       console.log('Se ha Conectado un: Administrador')
       console.log('---------------------------------')
